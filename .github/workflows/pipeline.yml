@@ -17,6 +17,8 @@ jobs:
       - name: Run Linter
         run: npm run lint
 
+      - name: Install Prettier
+        run: npm install prettier
 
       - name: Run Formatter
         run: npm run prettier
