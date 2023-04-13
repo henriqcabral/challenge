@@ -17,5 +17,11 @@ spec:
       containers:
       - name: challenge
         image: xpsiron/challenge:latest
+        env:
+        - name: MY_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: challenge
+              key: MY_SECRET
         ports:
         - containerPort: 3000
